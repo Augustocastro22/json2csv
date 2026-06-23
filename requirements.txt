@@ -1,0 +1,8 @@
+# Dependencias de ejecución (runtime).
+#
+# json2csv funciona únicamente con la biblioteca estándar de Python
+# (módulos json, csv, argparse, pathlib), por lo que no requiere paquetes
+# de terceros para su ejecución.
+#
+# Las dependencias de desarrollo (linters, type checkers, tests, seguridad
+# y documentación) se listan en requirements-dev.txt.
