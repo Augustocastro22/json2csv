@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "json2csv"
+version = "0.1.0"
+description = "Herramienta CLI para convertir archivos JSON a CSV con controles robustos de excepciones."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Augusto Castro", email = "augustocastro03@gmail.com" }]
+
+[project.scripts]
+json2csv = "json2csv.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
