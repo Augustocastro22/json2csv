@@ -16,3 +16,7 @@ docs/_build/
 # Windows
 desktop.ini
 Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
