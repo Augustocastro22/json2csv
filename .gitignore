@@ -12,3 +12,7 @@ dist/
 .coverage
 htmlcov/
 docs/_build/
+
+# Windows
+desktop.ini
+Thumbs.db
