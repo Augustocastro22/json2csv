@@ -17,7 +17,6 @@ from json2csv.json2csv import (
     write_csv,
 )
 
-
 # --- read_json ---
 
 
