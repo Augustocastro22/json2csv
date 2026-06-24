@@ -11,9 +11,9 @@ from __future__ import annotations
 import csv
 import json
 from pathlib import Path
-from typing import Any, Union
+from typing import Any
 
-StrPath = Union[str, Path]
+StrPath = str | Path
 
 
 class Json2CsvError(Exception):

@@ -16,3 +16,53 @@ json2csv = "json2csv.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+# --- Calidad de código (incisos h-m) ---
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+# E,W: PEP 8 (pycodestyle) | F: pyflakes | I: isort
+# D: PEP 257 (pydocstyle) | UP: pyupgrade | B: bugbear
+select = ["E", "W", "F", "I", "D", "UP", "B"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+# Los tests no requieren docstrings en cada función.
+"tests/*" = ["D"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+files = ["src"]
+
+[tool.pyright]
+include = ["src"]
+pythonVersion = "3.10"
+typeCheckingMode = "standard"
+
+# --- Pruebas y cobertura (incisos n-p) ---
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=json2csv --cov-report=term-missing --cov-fail-under=85"
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["json2csv"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.bandit]
+exclude_dirs = ["tests"]
