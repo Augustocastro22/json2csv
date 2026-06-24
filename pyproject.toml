@@ -32,9 +32,10 @@ src = ["src", "tests"]
 # E,W: PEP 8 (pycodestyle) | F: pyflakes | I: isort
 # D: PEP 257 (pydocstyle) | UP: pyupgrade | B: bugbear
 select = ["E", "W", "F", "I", "D", "UP", "B"]
+ignore = ["D203", "D213"]
 
 [tool.ruff.lint.pydocstyle]
-convention = "google"
+convention = "pep257"
 
 [tool.ruff.lint.per-file-ignores]
 # Los tests no requieren docstrings en cada función.
